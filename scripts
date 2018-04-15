@@ -1,0 +1,5 @@
+
+sisa-as <programa_s> -o <programa> //assembleja
+sisa-objcopy -O binary -j .text <programa> <programa.hex> //agafar els hexcodes
+od -An -w2 -x <programa.hex> > programa.hex //binari a ascii
+sed -i -e 's/ //' <programa> //Eliminar espais
